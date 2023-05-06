@@ -31,7 +31,7 @@
 			res.innerHTML=""
 			
 			 for (let i=0; i<matches.length;i++)
-			     res.innerHTML=res.innerHTML +"<p><a href="+matches[i]+ziel+">"+matches[i]+"</a></p>"; 
+			     res.innerHTML=res.innerHTML +"<p><a href="+matches[i]+ziel+">"+matches[i].toLowerCase()+"</a></p>"; 
 			 if (res.innerHTML=="")
 				 res.innerHTML= "<p>"+"kein Ergebniss gefunden. Achten sie auf Groß- und Kleinschreibung"+"</p>";
 			 res.innerHTML=res.innerHTML+"<button onclick='abbruch()'> Fertig</button>";
