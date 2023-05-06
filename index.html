@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="/style/mainstyle.css" rel="stylesheet" type="text/css" />
+		<title>Starseite</title>
+		<style>
+			#listesportarten {
+				color: black;
+			}
+		</style>
+		<script>
+			var test
+			function zuruck() {
+				window.open(test)
+			}
+			var ziel = " target='_parent'"
+			target = "'_parent'"
+			var zuSuchendesObjekt
+			var matches
+			function abbruch() {
+				document.getElementById("results").innerHTML = ""
+			}
+			var artikelListe = [
+				"Schulranzenreißen",
+				"Schulranzenschleppen",
+				"Schulranzenschlepperton",
+				"Seasons",
+				"Schulranzenstemmen",
+				"Schulranzenpressen",
+				"Schulranzensprint",
+				"Schulen",
+				"Coaches",
+			]
+			var res
+			function sucheArtikel() {
+				zuSuchendesObjekt = document.getElementById("sucheintrag").value
+				matches = []
+				for (let i = 0; i < artikelListe.length; i++) {
+					if (artikelListe[i].search(zuSuchendesObjekt) > -1) {
+						let m = matches.length
+						matches[m] = artikelListe[i]
+					}
+				}
+				res = document.getElementById("results")
+				res.innerHTML = ""
+
+				for (let i = 0; i < matches.length; i++)
+					res.innerHTML =
+						res.innerHTML +
+						"<p><a href=" +
+						matches[i] +
+						ziel +
+						">" +
+						matches[i] +
+						"</a></p>"
+				if (res.innerHTML == "")
+					res.innerHTML =
+						"<p>" +
+						"kein Ergebniss gefunden. Achten sie auf Groß- und Kleinschreibung" +
+						"</p>"
+				res.innerHTML =
+					res.innerHTML +
+					"<button onclick='abbruch()'> Fertig</button>"
+			}
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<strong><div id="title">Startseite</div></strong>
+			<div id="text-start">
+				<p>
+					Wilkommen. Diese Website ist für Sie da, um Sie satirisch
+					über nicht als solche anerkannten Sportarten innerhalb der
+					Schule außerhalb des Sportunterrichtes zu informieren.
+					Andersgesagt: unerkannte Sportarten in der Schule. Kurz:
+					unerkannte Schulsportarten.
+				</p>
+			</div>
+			<br />
+			<div id="listesportarten">
+				Hier eine Liste mit einigen Sportarten, die unter diese
+				Kategorie fallen:
+				<ul>
+					<li>
+						<a href="/Schulranzenreißen.html"
+							>Schulranzenrei&szlig;de</a
+						>
+					</li>
+					<li>
+						<a href="/Schulranzenstemmen.html"
+							>Schulranzenstemmen</a
+						>
+					</li>
+					<li>
+						<a href="/Schulranzenpressen.html"
+							>Schulranzenpressen</a
+						>
+					</li>
+					<li>
+						<a href="/Schulranzenschleppen.html"
+							>Schulranzenschleppen</a
+						>
+					</li>
+				</ul>
+			</div>
+			<p>
+				Zudem geben wir Informationen wann die
+				<a href="/Seasons.html">Seasons und Off-Seasons</a> sind.
+			</p>
+			<p>
+				Außerdem geben wir ihnen noch Informationen über
+				<a href="/Schulen.html">Veranstallter</a> und die
+				<a href="/Coaches.html">Coaches</a>.
+			</p>
+			<br />
+			<div>
+				<div id="suche">
+					<input type="text" id="sucheintrag" />
+				</div>
+				<button onclick="sucheArtikel()" id="suchen">suchen</button>
+				<button
+					onclick="document.getElementById('sucheintrag').value=''; sucheArtikel();">
+					weitere Artikel
+				</button>
+			</div>
+			<div id="results"></div>
+		</div>
+	</body>
+</html>

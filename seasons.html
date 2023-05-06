@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="/style/mainstyle.css" rel="stylesheet" type="text/css" />
+		<title>Season und Off-Season</title>
+		<script>
+			var s = 0
+			function functionsommerschwitzen() {
+				if (s == 0) {
+					document.getElementById("sommerschwitzen").innerHTML =
+						"<p>Sommerschwitzen oder auch Sommerferien sind in Deutschland jährlich wiederholdende Off-Seasons. Die Dauer ist konsatnt 6 Wochen in Deutschland. Starten je nach Land und Jahr zwischen der zweiten Junihälfte und zweite Julihälfte und enden zwischen Anfang August und September. Gleich namige Off-Seasonssind unteranderen mit einer achtwöchigen Dauer in Österreich bekannt.</p> "
+					s = 1
+				} else {
+					document.getElementById("sommerschwitzen").innerHTML = ""
+					s = 0
+				}
+			}
+			var wf = 0
+			function funtionweihnachtsfreuen() {
+				if (wf == 0) {
+					document.getElementById("weihnachtsfreuen").innerHTML =
+						"<p>Weihnachtsfreuen oder auch Wheinachtsferien sind in Deutschland vielen weiteren Ländern eine Off-Season, die mit dem Event Wheinnachten begründet wird. Sie beginnt varierend kurz vor Wheinachten und endet einige ÄTage bis eine Woche nach Silvester. Die Dauer beträgt meist einundhalb bis zweiundhalb Wochen.</p> "
+					wf = 1
+				} else {
+					document.getElementById("weihnachtsfreuen").innerHTML = ""
+					wf = 0
+				}
+			}
+			var oev = 0
+			function functionostereiersuchvorbereitung() {
+				if (oev == 0) {
+					document.getElementById(
+						"ostereiersuchvorbereitung"
+					).innerHTML =
+						"<p>Ostereiersuchvorbereitung oder auch Osterferien sind eine Off-Seasons die unter anderen in Deutschland jährlich um Ostern herum wiederholt. Der Fokus liegt in diesen Ferien auf dem Osterfest und den . diese Zeit ist auch für viele bunte Eier, auch Ostereier genannt, bekannt, nach dem auch der Seasonname gegeben ist.</p> "
+					oev = 1
+				} else {
+					document.getElementById(
+						"ostereiersuchvorbereitung"
+					).innerHTML = ""
+					oev = 0
+				}
+			}
+			function test() {
+				document.write("hi")
+			}
+		</script>
+	</head>
+	<body>
+		<div id="title">Season und Off-Season</div>
+		<div id="text">
+			<p>
+				Unter Season verteht man auf dieser Website die Trainngs- und
+				Webkampfperioden von hier behandelten Sportarten. und Off-Season
+				die restliche Zeit des Jahres. Wenn auf dieser Seite von
+				(Off-)Seasons gesprochen wird, werden, wenn nicht anderes für
+				diese Sportart gilt und hinzugeschrieben, sind die klassischen
+				Unerkannten-Schulsportarten-(Off)-Seasons, auch klassische
+				Unerkannte-Schulsportarten-Aktivitätsperioden gemeint.
+			</p>
+			<strong>klassische Unerkannte-Sportarten-Seasons</strong>
+			<p>
+				Die Seasons sind oft vom Staat festgelegt, dennoch werden sie in
+				föderalen Staaten öfters von den einzelnen bündnissangehörigern
+				Regierungen individuelle festgelegt, wie zB. in Deutschland. Die
+				Seasons werden im Volksmund meist als Schulzeit und die
+				Off-Seasons als Ferien.
+			</p>
+			<strong
+				>klassische Unerkannte-Schulsportarten-Aktivitätsperioden in
+				Deutschland</strong
+			>
+			<p>
+				In Deutschland werden , auf Grund des förderalistischen
+				Verfassungscharakter der Bundesrepublik Deutschland, die Seasons
+				und somit auch die Off-Seasons von dne einzelnen Bundesländern
+				festgelegt.
+			</p>
+			<p>
+				Diese werden für jedes Jahr meist mindestens 5 Jahren im Vorraus
+				für jedes Jahr festgelegt. Die Off-Seasons sind oft ähnlich wie
+				din dem Vorgängerjahr. Oft sind sie jedes Jahrgleich bennant und
+				jedes Jahr gleich lang wie wie davor. Sie beginenn nur manchemal
+				wenige Tage bis Wochen früher oder später. Hier eine Liste mit
+				einigen bekannten Off-Seasons:
+			</p>
+			<ul>
+				<li>
+					<button id="buttonlist" onclick="functionsommerschwitzen()">
+						Sommerschwitzen
+					</button>
+				</li>
+				<a id="sommerschwitzen"></a>
+				<li>
+					<button id="buttonlist" onclick="funtionweihnachtsfreuen()">
+						Weihnachtsfreuen
+					</button>
+				</li>
+				<a id="weihnachtsfreuen"></a>
+				<li>
+					<button
+						id="buttonlist"
+						onclick="functionostereiersuchvorbereitung()">
+						Ostereiersuchvorbereitung
+					</button>
+				</li>
+				<a id="ostereiersuchvorbereitung"></a>
+				<li>Herbsterholung</li>
+				<li>Winterlangwielen</li>
+				<li>Pfingstzusatz</li>
+			</ul>
+		</div>
+		<object
+			data="/randlinks.html"
+			type="text/html"
+			id="randlinksobject"></object>
+	</body>
+</html>
