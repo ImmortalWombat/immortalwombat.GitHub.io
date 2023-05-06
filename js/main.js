@@ -37,7 +37,7 @@ function sucheArtikel() {
 		res.innerHTML =
 			res.innerHTML +
 			"<p><a href=/" +
-			matches[i] +
+			matches[i].toLowerCase() +
 			ziel +
 			">" +
 			matches[i] +
