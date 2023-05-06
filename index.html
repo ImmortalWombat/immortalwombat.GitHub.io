@@ -35,7 +35,7 @@
 			]
 			var res
 			function sucheArtikel() {
-				zuSuchendesObjekt = document.getElementById("sucheintrag").value
+				zuSuchendesObjekt = document.getElementById("sucheintrag").value.toLowerCase()
 				matches = []
 				for (let i = 0; i < artikelListe.length; i++) {
 					if (artikelListe[i].search(zuSuchendesObjekt) > -1) {
